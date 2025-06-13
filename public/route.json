@@ -1,0 +1,29 @@
+{
+  "routes": [
+    {
+      "path": "/_next/static/",
+      "status": "200",
+      "headers": {
+        "Cache-Control": "public, max-age=31536000, immutable"
+      }
+    },
+    {
+      "path": "/static/",
+      "status": "200",
+      "headers": {
+        "Cache-Control": "public, max-age=31536000, immutable"
+      }
+    },
+    {
+      "path": "/**/*",
+      "status": "200",
+      "headers": {
+        "Cache-Control": "no-cache"
+      },
+      "target": {
+        "kind": "rewrite",
+        "path": "/index.html"
+      }
+    }
+  ]
+}
