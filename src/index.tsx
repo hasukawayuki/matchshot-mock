@@ -3,6 +3,11 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import { Amplify } from 'aws-amplify';
+import awsmobile from './aws-exports';
+
+// Amplify設定を適用
+Amplify.configure(awsmobile);
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
